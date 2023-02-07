@@ -1,0 +1,40 @@
+
+body {
+	background-color: #F8F8F8;
+
+	color: $font;
+	font-size: 14px;
+	font-family: 'Montserrat', sans-serif;
+}
+
+video {
+	outline: none;
+}
+
+.video {
+	width: 100%;
+}
+
+.ibg {
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	img{display: none;}
+}
+
+.container {
+	width: 100%;
+	max-width: 1170px;
+	padding: 0 20px;
+	margin: 0 auto;
+}
+
+.center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.accordeon {
+	text-decoration: none !important;
+}

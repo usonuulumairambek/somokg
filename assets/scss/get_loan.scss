@@ -1,0 +1,240 @@
+@import "_reset-css.scss";
+@import "_color.scss";
+@import "global_classes.scss";
+
+body {
+	background-color: #fff;
+	counter-reset: section;   
+}
+
+
+.sticky-place {
+	position: relative;
+}
+
+
+
+.bg-title {
+	position: relative;
+	padding: 40px 0;
+
+	border-top: 1px solid #ebedee;
+	border-bottom: 1px solid #ebedee;
+
+	&__description {
+		font-size: 50px;
+		font-weight: 600;
+   	 	line-height: 58px;
+
+   	 	color: $font;
+	}
+}
+
+// media---------------------------------------------------------
+
+@media (max-width: 768px) {
+	
+	.bg-title {
+		background-color: $important;
+		padding: 30px 0;
+
+		&__description {
+			font-size: 30px;
+			line-height: normal;
+			color: #fff;
+		}
+	}
+}
+
+// about-loans ------------------------------------------------------
+// about-loans ------------------------------------------------------
+
+
+.about-loans {
+	position: relative;
+
+	&__text {
+		padding: 40px 420px 40px 0;
+
+		p {
+			font-size: 16px;
+			font-weight: 400;
+   		 	line-height: 24px;
+   		 	color: $font;
+			padding-bottom: 20px;
+
+			text-align: justify;
+		}
+
+		span {
+			font-weight: 700;
+		}
+	}
+}
+
+@media (max-width: 1024px) {
+	
+	.about-loans {
+
+		&__text {
+			width: 100%;
+			padding: 40px 0;
+		}
+	}
+}
+
+// sidebar ------------------------------------------------------
+
+
+.sidebar {
+	position: absolute;
+    top: -20px;
+    right: calc(100vw - 1170px - (100vw - 1170px)/2 + 20px);
+    height: 100%;
+}
+
+.calculator {
+	position: sticky;
+    top: 20px;
+    transition: transform .6s ease-in-out;
+    z-index: 100;
+}
+
+@media (max-width: 1171px) {
+	
+	.sidebar {
+		right: 20px;
+	}
+}
+
+@media (max-width: 1024px) {
+	
+	.sidebar {
+		display: none;
+	}
+}
+
+// end sidebar ------------------------------------------------------
+// end sidebar ------------------------------------------------------
+
+// steps ------------------------------------------------------
+// steps ------------------------------------------------------
+
+.steps {
+	background-color: #EBEDEE;
+	padding: 40px 0;
+
+	&__blocks {
+		position: relative;
+		padding: 0 420px 0 75px;
+
+		&:before {
+			content: "";
+		    position: absolute;
+		    top: 0;
+		    left: 24px;
+		    bottom: 0;
+		    border-left: 6px dotted #d2d5d9;
+		}
+	}
+
+	&__block {
+		margin-bottom: 40px;
+
+		p {
+			font-size: 16px;
+			font-weight: 400;
+   		 	line-height: 24px;
+   		 	color: $font;
+			padding-bottom: 20px;
+
+			text-align: justify;
+		}
+
+		ul {
+		}
+
+		li {
+			font-size: 16px;
+			font-weight: 400;
+   		 	line-height: 24px;
+   		 	color: $font;
+			padding-bottom: 15px;
+			padding-left: 20px;
+
+			text-align: justify;
+
+			&:before {
+				 content: "•";
+				  padding-right: 8px;
+				  color: #000;
+			}
+		}
+	}
+
+	&__title {
+		position: relative;
+		font-size: 34px;
+		font-weight: 600;
+		line-height: 42px;
+		margin-bottom: 20px;
+		color: $font;
+
+		&:before {
+			position: absolute;
+
+			display: flex;
+		    align-items: center;
+		    justify-content: center;
+		    top: 0;
+		    left: -75px;
+		    width: 55px;
+		    height: 55px;
+		    margin-bottom: 20px;
+		    content: counter(section);
+		    counter-increment: section;
+		    font-size: 24px;
+		    background-color: #df4d17;
+		    color: #fff;
+		    border-radius: 50%;
+		}
+	}
+}
+
+@media (max-width: 1024px) {
+	
+	.steps {
+
+		&__blocks {
+			width: 100%;
+			padding: 0 0 0 75px;
+
+			&:before {
+				display: none;
+			}
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	
+	.steps {
+		overflow: hidden;
+
+		&__blocks {
+			padding: 0;
+		}
+
+		&__title {
+			font-size: 24px;
+			margin-top: 70px;
+
+			&:before {
+				left: 0;
+				top: -75px;
+			}
+		}
+	}
+}
+// end steps ------------------------------------------------------
+// end steps ------------------------------------------------------

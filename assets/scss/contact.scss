@@ -1,0 +1,155 @@
+@import "_reset-css.scss";
+@import "_color.scss";
+@import "global_classes.scss";
+
+body {
+	background-color: #fff;
+	counter-reset: section;   
+}
+
+
+.sticky-place {
+	position: relative;
+}
+
+
+
+.bg-title {
+	position: relative;
+	padding: 40px 0;
+
+	border-top: 1px solid #ebedee;
+	border-bottom: 1px solid #ebedee;
+
+	&__description {
+		font-size: 50px;
+		font-weight: 600;
+   	 	line-height: 58px;
+
+   	 	color: $font;
+	}
+}
+
+// media---------------------------------------------------------
+
+@media (max-width: 768px) {
+	
+	.bg-title {
+		background-color: $important;
+		padding: 30px 0;
+
+		&__description {
+			font-size: 30px;
+			line-height: normal;
+			color: #fff;
+		}
+	}
+}
+
+// payment-info ------------------------------------------------------
+// payment-info ------------------------------------------------------
+
+
+.contact-info {
+	position: relative;
+	padding: 40px 0;
+
+	&__inner {
+		display: flex;
+		justify-content: space-around;
+
+	}
+
+	&__item {
+		width: 33.333%;
+	}
+
+	&__img {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		width: 85px;
+	    height: 85px;
+	    margin-bottom: 20px;
+	    border-radius: 50%;
+
+	    background-color: $important;
+
+	    img {
+	    	width: 60px;
+			height: 60px;
+	    }
+	}
+
+	&__text {
+		font-size: 24px;
+		line-height: 32px;
+		margin-bottom: 20px;
+
+		color: $font;
+	}
+
+	&__list {
+
+		li {
+			position: relative;
+			font-size: 20px;
+			line-height: 28px;
+			padding-bottom: 15px;
+			padding-left: 40px;
+
+			&:before {
+				content: "";
+
+				background-image: url(../images/icon/phone.svg);
+				background-size: cover;
+				background-repeat: no-repeat;
+				
+				position: absolute;
+				left: 0;
+				width: 25px;
+				height: 25px;
+				// width: 25px;
+				// height: 25px;
+			}
+
+			&:last-child {
+
+				&:before {
+					content: "";
+
+					background-image: url(../images/icon/mail.svg);
+					background-size: cover;
+					background-repeat: no-repeat;
+					
+					position: absolute;
+					left: -5px;
+					width: 35px;
+					height: 26px;
+					// width: 25px;
+					// height: 25px;
+				}
+			}
+		}
+	}
+}
+
+// media---------------------------------------------------------
+
+@media (max-width: 768px) {
+	
+	.contact-info {
+		
+		&__inner {
+			flex-wrap: wrap;
+		}
+
+		&__item {
+			margin-top: 30px;
+			width: 100%;
+		}
+	}
+}
+
+

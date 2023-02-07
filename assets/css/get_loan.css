@@ -1,0 +1,317 @@
+@charset "UTF-8";
+/* CSS reset with box-sizing fix */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a,
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+  text-decoration: none;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  outline: none;
+}
+
+body {
+  background-color: #F8F8F8;
+  color: #3c4045;
+  font-size: 14px;
+  font-family: "Montserrat", sans-serif;
+}
+
+video {
+  outline: none;
+}
+
+.video {
+  width: 100%;
+}
+
+.ibg {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.ibg img {
+  display: none;
+}
+
+.container {
+  width: 100%;
+  max-width: 1170px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.accordeon {
+  text-decoration: none !important;
+}
+
+body {
+  background-color: #fff;
+  counter-reset: section;
+}
+
+.sticky-place {
+  position: relative;
+}
+
+.bg-title {
+  position: relative;
+  padding: 40px 0;
+  border-top: 1px solid #ebedee;
+  border-bottom: 1px solid #ebedee;
+}
+.bg-title__description {
+  font-size: 50px;
+  font-weight: 600;
+  line-height: 58px;
+  color: #3c4045;
+}
+
+@media (max-width: 768px) {
+  .bg-title {
+    background-color: #09a1a7;
+    padding: 30px 0;
+  }
+  .bg-title__description {
+    font-size: 30px;
+    line-height: normal;
+    color: #fff;
+  }
+}
+.about-loans {
+  position: relative;
+}
+.about-loans__text {
+  padding: 40px 420px 40px 0;
+}
+.about-loans__text p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #3c4045;
+  padding-bottom: 20px;
+  text-align: justify;
+}
+.about-loans__text span {
+  font-weight: 700;
+}
+
+@media (max-width: 1024px) {
+  .about-loans__text {
+    width: 100%;
+    padding: 40px 0;
+  }
+}
+.sidebar {
+  position: absolute;
+  top: -20px;
+  right: calc(100vw - 1170px - (100vw - 1170px)/2 + 20px);
+  height: 100%;
+}
+
+.calculator {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 20px;
+  transition: transform 0.6s ease-in-out;
+  z-index: 100;
+}
+
+@media (max-width: 1171px) {
+  .sidebar {
+    right: 20px;
+  }
+}
+@media (max-width: 1024px) {
+  .sidebar {
+    display: none;
+  }
+}
+.steps {
+  background-color: #EBEDEE;
+  padding: 40px 0;
+}
+.steps__blocks {
+  position: relative;
+  padding: 0 420px 0 75px;
+}
+.steps__blocks:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 24px;
+  bottom: 0;
+  border-left: 6px dotted #d2d5d9;
+}
+.steps__block {
+  margin-bottom: 40px;
+}
+.steps__block p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #3c4045;
+  padding-bottom: 20px;
+  text-align: justify;
+}
+.steps__block li {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #3c4045;
+  padding-bottom: 15px;
+  padding-left: 20px;
+  text-align: justify;
+}
+.steps__block li:before {
+  content: "•";
+  padding-right: 8px;
+  color: #000;
+}
+.steps__title {
+  position: relative;
+  font-size: 34px;
+  font-weight: 600;
+  line-height: 42px;
+  margin-bottom: 20px;
+  color: #3c4045;
+}
+.steps__title:before {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: -75px;
+  width: 55px;
+  height: 55px;
+  margin-bottom: 20px;
+  content: counter(section);
+  counter-increment: section;
+  font-size: 24px;
+  background-color: #09a1a7;
+  color: #fff;
+  border-radius: 50%;
+}
+
+@media (max-width: 1024px) {
+  .steps__blocks {
+    width: 100%;
+    padding: 0 0 0 75px;
+  }
+  .steps__blocks:before {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  .steps {
+    overflow: hidden;
+  }
+  .steps__blocks {
+    padding: 0;
+  }
+  .steps__title {
+    font-size: 24px;
+    margin-top: 70px;
+  }
+  .steps__title:before {
+    left: 0;
+    top: -75px;
+  }
+}

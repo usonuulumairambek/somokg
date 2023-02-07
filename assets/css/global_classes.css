@@ -1,0 +1,31 @@
+body {
+    background-color: #F8F8F8;
+    font-size: 15px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.ibg {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.ibg img {
+    display: none;
+}
+
+.container {
+    width: 100%;
+    max-width: 1170px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
+.center {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
